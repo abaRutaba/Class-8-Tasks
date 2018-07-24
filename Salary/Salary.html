@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="Salary.js"></script>
+</head>
+<body>
+        <div ng-app = "mainApp" ng-controller = "calSalary">
+<!--
+                <p>Enter a number: <input type = "number" ng-model = "number" /></p>
+                <button ng-click = "square()">X<sup>2</sup></button>
+                <p>Result: {{result}}</p>
+                -->
+                <form name="myForm">
+		<table>
+			<tr>
+
+				<td>Basic Salary + </td>
+				<td><input type="text" ng-model="basicSal"></td>
+			</tr>
+			<tr>
+				<td>House Allowance + </td>
+				<td><input type="text" ng-model="houseAll"></td>
+			</tr>
+			<tr>
+				<td>tax -</td>
+				<td><input type="text" ng-model="tax"></td>
+			</tr>
+			<tr>
+
+				<td>Medical Allowance +</td>
+				<td><input type="text" ng-model="medicalAll"></td>
+			</tr>
+			<tr>
+				<td>Transport +</td>
+				<td><input type="text" ng-model="transport"></td>
+			</tr>
+			
+			<tr>
+				<td>
+					<button ng-click = "cal()">Calculate Gross Salary</button>
+				</td>
+			</tr>
+		</table>
+		<p>Gross Salary = {{gSalary}}</p>
+		</form>
+     </div>
+</body>
+</html>
